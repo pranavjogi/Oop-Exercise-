@@ -1,0 +1,27 @@
+import java.util.*;
+
+public class pra32 {
+
+    public static <T> boolean searchElement(LinkedList<T> list, T element) {
+        return list.contains(element);
+    }
+
+    public static void main(String[] args) {
+
+        LinkedList<Integer> rolls = new LinkedList<>();
+        rolls.add(101);
+        rolls.add(102);
+        rolls.add(103);
+
+        LinkedList<String> names = new LinkedList<>();
+        names.add("Aman");
+        names.add("Rahul");
+        names.add("Priya");
+
+        System.out.println("Search 102: " + searchElement(rolls, 102));
+        System.out.println("Search 105: " + searchElement(rolls, 105));
+
+        System.out.println("Search Rahul: " + searchElement(names, "Rahul"));
+        System.out.println("Search Neha: " + searchElement(names, "Neha"));
+    }
+}
