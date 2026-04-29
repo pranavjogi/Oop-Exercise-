@@ -1,0 +1,45 @@
+class Employee {
+
+    String name;
+    String department;
+
+    Employee(String n, String d) {
+        name = n;
+        department = d;
+    }
+
+    void displayDetails() {
+        System.out.println("Name: " + name);
+        System.out.println("Department: " + department);
+    }
+}
+
+class Manager extends Employee {
+
+    int teamSize;
+    String project;
+
+    Manager(String n, String d, int t, String p) {
+        super(n, d);
+        teamSize = t;
+        project = p;
+    }
+
+    void displayDetails() {
+        System.out.println("Name: " + name);
+        System.out.println("Department: " + department);
+        System.out.println("Team Size: " + teamSize);
+        System.out.println("Project: " + project);
+    }
+}
+
+public class pra15 {
+    public static void main(String[] args) {
+
+        Employee e = new Employee("Aman", "HR");
+        Manager m = new Manager("Rahul", "IT", 10, "Project X");
+
+        e.displayDetails();
+        m.displayDetails();
+    }
+}
