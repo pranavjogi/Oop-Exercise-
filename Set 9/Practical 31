@@ -1,0 +1,27 @@
+import java.util.*;
+
+public class pra31 {
+    public static void main(String[] args) {
+
+        LinkedList<String> playlist = new LinkedList<>();
+
+        playlist.add("Song1");
+        playlist.add("Song2");
+        playlist.add("Song3");
+        playlist.add("Song4");
+
+        System.out.println("Playlist: " + playlist);
+
+        if (!playlist.isEmpty()) {
+            String first = playlist.removeFirst();
+            System.out.println("Playing: " + first);
+            System.out.println("After playing first song: " + playlist);
+        }
+
+        if (!playlist.isEmpty()) {
+            String last = playlist.removeLast();
+            System.out.println("Skipped: " + last);
+            System.out.println("After skipping last song: " + playlist);
+        }
+    }
+}
